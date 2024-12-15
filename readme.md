@@ -5,10 +5,12 @@
 
 但是手动移除太麻烦了，要改几十个文件的几百处地方，所以这里提供一种自动化的方式。
 
+[项目地址在这里，点击查看](https://github.com/dingshaohua-com/arco-rm-i18n)。
+
 
 ## Bun
-<img src="https://img.dingshaohua.com/book-fe/202412152326535.svg" width="100"/>
 
+<img src="https://img.dingshaohua.com/book-fe/202412152326535.svg" width="100"/>
 
 这个脚本需要使用 [bun](https://bun.sh) 来运行，而非node来运行，原因如下：
 
@@ -20,12 +22,12 @@ node是在 Node.js v22.6.0 版本后支持直接运行 ts 文件，而 bun 则�
 ### 直接支持esm
 bun 直接支持 esm，无需修改原项目的 `type: module`，从而对原项目造成不必要的副作用。
 
-### 直接短连接等配置
+### 支持短连接等配置
 bun 直接支持短连接等配置，node目前不支持 或支持的有问题。
 
+### 安装 bun 
 
----
-让我们来安装 bun
+让我们来安装 bun 
 ```shell
 # macOS
 curl -fsSL https://bun.sh/install | bash
