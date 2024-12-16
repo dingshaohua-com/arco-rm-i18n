@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { locale } from './locale-path';
-import { deleteLinesInRange } from './helper';
+import { deleteLinesInRange, getLines } from './helper';
 
 const escapeRegExp = (str) => {
   return str.replace(/[.*+?^=!:${}()|\[\]\/\\]/g, '\\$&'); // 转义正则特殊字符
@@ -65,7 +65,13 @@ export const start = (filePath) => {
 
   // 特殊处理：删除页面内语言切换模块
   if (filePath.indexOf('components/navbar/index.vue') > -1) {
-    deleteLinesInRange(filePath, 35, 63);
+    const lineCont = getLines(filePath, 36);
+    console.log(lineCont);
+    
+    const oldCont = `<a-tooltip :content="$t('settings.language')">`;
+    if(lineCont.indexOf(oldCont) > -1){
+      deleteLinesInRange(filePath, 35, 63);
+    }
   }
 
   // 特殊处理：替换App.vue

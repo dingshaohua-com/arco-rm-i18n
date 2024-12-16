@@ -24,5 +24,10 @@ export const deleteLinesInRange = (filePath, startLine, endLine) => {
   fs.writeFileSync(filePath, newLines.join('\n'), 'utf-8');
 };
 
+export const getLines = (filePath, lineNumber) => {
+  const data = fs.readFileSync(filePath, 'utf-8'); // 同步读取文件内容
+  const lines = data.split('\n'); // 将文件内容按行拆分
+  return lines[lineNumber - 1]; // 返回指定行内容
+};
 
 export default {};
