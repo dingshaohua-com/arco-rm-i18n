@@ -9,6 +9,7 @@
 
 
 ## Bun
+如果你是node v23，则可以忽略此步！
 
 <img src="https://img.dingshaohua.com/book-fe/202412152326535.svg" width="100"/>
 
@@ -26,7 +27,6 @@ bun 直接支持 esm，无需修改原项目的 `type: module`，从而对原项
 bun 直接支持短连接等配置，node目前不支持 或支持的有问题。
 
 ### 安装 bun 
-
 让我们来安装 bun 
 ```shell
 # macOS
@@ -46,10 +46,18 @@ curl -fsSL https://bun.sh/install | bash
 ```
 
 ## 执行脚本
+如果你是node v23，则可以直接运行此脚本！
+```shell
+node ./bin/rm-i18n/index.ts
+```
+
+否则，则使用 bun
 ```
 bun run ./bin/rm-i18n/index.ts
 ```
 运行完，即可看到效果~
+
+如果你是
 
 
 ## 注意事项
