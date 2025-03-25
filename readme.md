@@ -9,11 +9,11 @@
 
 
 ## Bun
-如果你是node v23，则可以忽略此步！
+
 
 <img src="https://img.dingshaohua.com/book-fe/202412152326535.svg" width="100"/>
 
-这个脚本需要使用 [bun](https://bun.sh) 来运行，而非node来运行，原因如下：
+如果你的node v23，则可以忽略此步，否则这个脚本则需要使用 [bun](https://bun.sh) 来运行，原因如下：
 
 ### 直接支持ts
 因为需要读取项目内国际化语言 ts 配置文件内容，从而替换掉国际化配置。
