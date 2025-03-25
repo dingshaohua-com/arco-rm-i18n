@@ -43,6 +43,9 @@ curl -fsSL https://bun.sh/install | bash
 "@" = "../src"
 ```
 
+此脚本一来 `glob`，所以还需要在你的项目中安装 `npm install --D glob`
+
+
 ## 执行脚本
 如果你是node v23，则可以直接运行此脚本！
 ```shell
