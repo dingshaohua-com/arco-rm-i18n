@@ -5,8 +5,6 @@
 
 但是手动移除太麻烦了，要改几十个文件的几百处地方，所以这里提供一种自动化的方式。
 
-[项目地址在这里，点击查看](https://github.com/dingshaohua-com/arco-rm-i18n)。
-
 
 ## Bun
 
